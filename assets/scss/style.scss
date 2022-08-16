@@ -35,27 +35,119 @@ body {
 .find_job {
    background: $bgColor;
     width: 100%; 
+    height: 100%;
 
    .container {
     display: flex;
-    justify-content: space-between;
-    
-   .uptitle {
-      width: 290px;
-      display: flex;
-      flex-wrap: wrap;
-      text-align: center;
-      align-items: center;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+   }
 
+   .uptitle {
+    width: 100%;
+    height: 100%;
+      }
+
+           @media (min-width: 768px) {
+            .container {
+               display: flex;
+               flex-direction: row;
+               gap: 15px;
+               padding: 50px 0;
+       
+               .uptitle {
+                   width: 400px;
+                   height: 300px;
+           
+                 }
+           }
+       }
     }
 
-    @media (min-width: 768px) {
-        .uptitle {
-            width: 400px;
-            height: 300px;
-            display: flex;
-            text-align: left;
+
+.uptitle {
+
+    h1 {
+        font-weight: 900;
+        font-size: 24px;
+
+        @media (min-width: 768px) {
+            h1 {
+                font-size: 44px;
+            }
         }
     }
-  }
+
+    p {
+        font-size: 16px;
+
+        @media (min-width: 768px) {
+        font-size: 18px;
+        }
+    }
 }
+
+.uptitle_img img{
+        display: inline-block;
+        position: relative;
+        width: 250px;
+        height: 260px;
+   
+        @media (min-width: 768px) {
+               &  {
+            width: 545px;
+            height: 560px;
+        }
+    } 
+}
+
+
+.uptitle_form {
+    display:flex;
+    flex-direction:row;
+    border: 1px solid rgba(209, 209, 209, 0.1);
+    box-shadow: 0px 4px 25px rgba(15, 17, 56, 0.1);
+    border-radius: 5px;
+    color: #B2B2B2;
+    width: 290px;
+    height: 70px;
+
+          &_search {
+           flex-grow:2;
+           border:none;
+           padding: 10px;
+
+           &:focus {
+            outline: none;
+          }
+    }
+         &_btn {
+         background-color: #1A75E8;
+         color:white;
+         padding: 15px 30px;
+    }
+}
+
+ .uptitle_form + p {
+    margin: 20px;
+    color: #B2B2B2;
+    font-size: 14px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+   /
+
+      .examples {
+        border: 1px solid #B2B2B2;
+        border-radius: 5px;
+        padding: 5px 10px;
+        font-size: 14px;
+        margin: 10px;
+      }
+
+    //   width: 80px;
+    //   height: 27px;
+}  
