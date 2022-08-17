@@ -50,11 +50,31 @@ body {
     height: 100%;
       }
 
+      @media (min-width: 524px) {
+        .container {
+           display: flex;
+           flex-direction: row;
+           justify-content: center;
+           flex-wrap: wrap;
+           gap: 15px;
+           padding: 50px 0;
+           padding-right: 20px;
+           padding-left: 20px;
+   
+           .uptitle {
+               width: 400px;
+               height: 300px;
+               text-align: left;
+             }
+       }
+   }
+
            @media (min-width: 768px) {
             .container {
                display: flex;
                flex-direction: row;
                justify-content: space-between;
+               flex-wrap: wrap;
                gap: 15px;
                padding: 50px 0;
                padding-right: 20px;
@@ -85,6 +105,7 @@ body {
 @media (min-width: 768px) {
        .uptitle p {
          font-size: 18px;
+         margin-bottom: 25px;
        }
 }
 
@@ -95,17 +116,37 @@ body {
 }
 
 .uptitle_img img{
-        display: inline-block;
+        display: block;
         position: relative;
         width: 250px;
         height: 260px;
+
+        @media (min-width: 524px) {
+            & {
+                width: 300px;
+                height: 310px;
+            }
+        }
    
         @media (min-width: 768px) {
                &  {
-            width: 545px;
-            height: 560px;
+            width: 310px;
+            height: 430px;
         }
-    } 
+    }
+        @media (min-width: 820px) {
+            & {
+                width: 355px;
+                height: 390px;
+            }
+        }
+
+        @media (min-width: 1024px) {
+             & {
+                width: 545px;
+                height: 560px;
+             }
+        }  
 }
 
 .uptitle_form_block {
@@ -133,16 +174,17 @@ body {
           }
     }
          &_btn {
-            margin-left: 10px;
             width: 68px;
             height: 45px;
-            padding: 15px 30px;
+            padding: -5px 30px;
             background-color: #1A75E8;
             color: white;
             border: none;
             border-radius: 5px;
             margin-top: 15px;
             position: relative;
+            left: -10px;
+            top: -4px;
 
          &_text {
             opacity: 0;
@@ -151,10 +193,18 @@ body {
         }
     }
 }
+
+@media (min-width: 375px) {
+    .uptitle_form_block {
+        margin-left: auto;
+        margin-right: auto;
+    } 
+}
+
 @media (min-width: 425px) {
     .uptitle_form_block {
-        display: flex;
-    justify-content: center;
+        margin-left: 0;
+
     } 
     .uptitle_form {
         width: 390px;
@@ -163,9 +213,13 @@ body {
         }
 }
 
-@media (min-width: 768px) {
+@media (min-width: 524px) {
+    .uptitle_form_block {
+         margin: 0;
+    }
+
 .uptitle_form_btn {
-    width: 211px;
+    width: 220px;
     height: 49px; 
     left: -10px; 
     top: -5px;
@@ -183,24 +237,52 @@ body {
     width: 15px;
     height: 15px;
     background-color: #1A75E8;
+    margin: 0;
 }
 
- .uptitle_form + p {
-    margin: 20px;
+.for_example {
+    margin-left: 25px;
+    margin-top: 25px;
     color: #B2B2B2;
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    gap: 10px;
 
-      .examples {
+    & p {
+        font-size: 14px;
+    }
+
+    .first_example {
+        width: 100%;
+    }
+}
+
+.example {
+    display: flex;
+    gap: 5px;
+    margin-top: 15px;
+    margin-bottom: 50px;
+}
+
+ .examples {
         border: 1px solid #B2B2B2;
         border-radius: 5px;
         padding: 5px 10px;
         font-size: 14px;
-        margin: 10px;
+        color: #B2B2B2;
       }
 
-    //   width: 80px;
-    //   height: 27px;
-}  
+@media (min-width: 425px) {
+    .for_example {
+        display: flex;
+        flex-direction: row;
+
+        .first_example {
+            margin: 10px;
+        }
+
+        .example {
+            margin-top: -5px;
+        }
+    }
+}
