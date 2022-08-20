@@ -28,7 +28,6 @@ body {
 }
 
 // header
-@import 'header';
 
 // find job section
 
@@ -187,9 +186,10 @@ body {
             top: -4px;
 
          &_text {
-            opacity: 0;
-            color:white;
-            position: absolute;
+            // opacity: 0;
+            // color:white;
+            // position: absolute;
+            display: unset;
         }
     }
 }
