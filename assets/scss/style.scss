@@ -115,6 +115,7 @@ body {
 }
 
 .uptitle_img img{
+        margin: 0 auto;
         display: block;
         position: relative;
         width: 250px;
@@ -186,10 +187,9 @@ body {
             top: -4px;
 
          &_text {
-            // opacity: 0;
-            // color:white;
-            // position: absolute;
-            display: unset;
+            opacity: 0;
+            color:white;
+            position: absolute;
         }
     }
 }
