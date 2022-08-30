@@ -247,6 +247,10 @@ body {
     margin-top: -5px;
   }
 }
+.vacation .container {
+  display: flex;
+}
+
 .footer {
   padding: 50px 0 55px;
 }
