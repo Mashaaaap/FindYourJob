@@ -212,9 +212,6 @@ body {
   display: flex;
   flex-direction: column;
 }
-.for_example p {
-  font-size: 14px;
-}
 .for_example .first_example {
   width: 100%;
   margin-left: -60px;
@@ -247,8 +244,60 @@ body {
     margin-top: -5px;
   }
 }
-.vacation .container {
+.vacation_item {
+  margin: 20px 0;
+  text-align: center;
+  padding: 30px 0;
+  border: 1px solid #C5C9D5;
+  border-radius: 10px;
+}
+.vacation_item_money {
+  width: 113px;
+  height: 39px;
+  color: #ffffff;
+  font-weight: 700;
+  margin-left: 105px;
+  background: #1A75E8;
+  border-radius: 5px;
+  padding: 10px 24px 25px;
+}
+
+.requirements {
+  margin-left: 100px;
+  margin-top: 25px;
+  color: #B2B2B2;
+  font-size: 14px;
   display: flex;
+  flex-direction: column;
+}
+.requirements .first_requirement {
+  width: 100%;
+  margin-left: -60px;
+}
+.requirements .elements {
+  display: flex;
+  gap: 5px;
+  margin: -20px 0 27px -35px;
+}
+.requirements .elements .requirement_element {
+  border: 1px solid #B2B2B2;
+  border-radius: 5px;
+  padding: 5px 10px;
+  font-size: 14px;
+  color: #B2B2B2;
+}
+
+.vacation_item_title {
+  padding: 10px;
+}
+.vacation_item_title_uptitle {
+  font-weight: 700;
+}
+.vacation_item_title_subtitle {
+  font-weight: 400;
+  font-size: 14px;
+  color: #111238;
+  opacity: 0.8;
 }
 
 .footer {
