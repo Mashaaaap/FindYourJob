@@ -285,6 +285,105 @@ body {
         }
     }
 }
+// category
+.category {
+    font-family: $font;
+    color: #21243D;
+    .category_text {
+       margin: 0;
+       padding: 70px 147px 40px;
+       font-style: normal;
+       font-weight: 700;
+       font-size: 24px;
+       line-height: 29px;
+       @media (max-width: 425px) {
+        text-align: center;
+        margin-left: -130px;
+        margin-right: 0;
+        padding-right: 10px;
+    }
+    }
+
+    .box {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        column-gap: 30px;
+        background-color: #F2F3F6;
+        width: 166px;
+        height: 128px;
+        border-radius: 10px;
+        margin: 0;
+        margin-right: 30px;
+        transition-duration: 0.5s, 0.5s;
+        transition-property: color, background-color;
+        transition-timing-function: ease-in-out;
+        @media (max-width: 425px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 81px;
+            margin-bottom: 30px;
+            margin-right: 0;
+            border: 0;
+        }
+    }
+
+    .box1 {
+        display: inline-block;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        column-gap: 30px;
+        background-color: #F2F3F6;
+        width: 166px;
+        height: 128px;
+        border-radius: 10px;
+        margin: 0;
+        margin-right: 30px;
+        margin-left: 147px;
+        transition-duration: 0.5s, 0.5s;
+        transition-property: color, background-color;
+        transition-timing-function: ease-in-out;
+        @media (max-width: 425px) {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-left: 81px;
+            margin-bottom: 30px;
+            margin-right: 0;
+        }
+    }
+
+    .img_text {
+        padding-top: 30px;
+    }
+
+    p {
+        margin-top: 10px;
+    }
+}
+
+.box:hover {
+    background-color: #1A75E8;
+    transition-duration: 0.5s, 0.5s;
+    transition-property: color, background-color;
+    transition-timing-function: ease-in;
+    color: white;
+    cursor: pointer;
+}
+
+.box1:hover {
+    background-color: #1A75E8;
+    transition-duration: 0.5s, 0.5s;
+    transition-property: color, background-color;
+    transition-timing-function: ease-in;
+    color: white;
+    cursor: pointer;
+}
+
+// email
 
 // vacation section
 
