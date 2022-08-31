@@ -1,17 +1,16 @@
-/* body {
+body {
     font-family: 'Fira Sans';
     font-style: normal;
-
     font-weight: 400;
     font-size: 16px;
     line-height: 19px;
     color: #111238;
-} */
+}
 
 .header {
     padding: 45px 0;
 
-    .container-1 {
+    .container {
         width: 1196;
         max-width: 100%;
         margin: 0 auto;
@@ -48,13 +47,19 @@
         }
     }
 
+   
+
+
     .btn_group {
         display: flex;
         align-items: center;
         column-gap: 40px;
+        font-size: 16px;
+
         button {
             border: none;
             background: transparent;
+
         }
 
         .primary {
@@ -63,5 +68,92 @@
             background: #1A75E8;
             color: #ffffff;
         }
+    }
+}
+
+    // mobile menu \\
+
+    #toggle {
+        display: none;
+    }
+
+    #toggle:checked  nav {
+        right: 0;
+        opacity: 1;
+    }
+
+    .toggle_btn span {
+        display: block;
+        margin-left: 200px;
+        height: 2px;
+        width: 30px;
+        background: #21243D;
+        position: relative;
+        transition: transform .4s ;
+
+        &::before {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 30px;
+                background: #21243D;
+                position: absolute;
+                top: -8px;
+                transition: transform .4s top .4s;
+            }
+
+        &::after {
+                content: '';
+                display: block;
+                height: 2px;
+                width: 30px;
+                background: #21243D;
+                position: absolute;
+                top: 8px;
+                transition: top .4s ;
+        }
+
+        .menu_list {
+            text-decoration: none;
+            text-transform: uppercase;
+            font-family: 'Montserrat';
+            font-size: 14px;
+            line-height: 17px;
+            color: #95E1D3;
+            padding-bottom: 10px;
+            transition: all 0.3s;
+        }
+        
+        .menu-list:hover {
+            color: #F38181;
+            border-bottom: 3px solid #F38181;
+        }
+    } 
+
+    @media (max-width: 425px) {
+        .menu {
+            display: none;
+        }
+
+        .header .btn_group {
+            display: none;
+        }
+    }
+
+@media (min-width: 625px) {
+    .toggle_btn {
+        display: none;
+    }
+}
+
+@media (max-width: 375px) {
+    .toggle_btn span {
+        margin-left: 160px;
+    }
+}
+
+@media (max-width: 320px) {
+    .toggle_btn span {
+        margin-left: 100px;
     }
 }
