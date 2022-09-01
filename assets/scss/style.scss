@@ -14,6 +14,7 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #21243D;
+    text-align: center;
 }
 
 // header
@@ -414,12 +415,15 @@ a {
 .vacation_item {
     width: 290px;
     height: 441px;
-    margin: 20px 0;
+    margin: 10px 0;
     text-align: center;
     padding: 30px 0;
     border: 1px solid #C5C9D5;
     border-radius: 10px;
-    @media (min-width: 768px) {
+    @media (min-width: 820px) {
+        margin: 10px 5px;
+    }
+    @media (min-width: 1024px) {
         width: 100%;
         height: 160px;
         display: flex;
@@ -431,7 +435,8 @@ a {
        height: 39px;
        color: #ffffff;
        font-weight: 700;
-       margin-left: 105px;
+       margin-left: auto;
+       margin-right: auto;
        background: $btnColor;
        border-radius: 5px;
        padding: 10px 24px 25px;
@@ -445,7 +450,7 @@ a {
     font-size: 14px;
     display: flex;
     flex-direction: column;
-    @media (min-width: 820px) {
+    @media (min-width: 1024px) {
         display: flex;
         flex-direction: row;
         column-gap: 43px;
@@ -473,7 +478,6 @@ a {
 } 
 
 .vacation_item_title {
-     padding: 10px;
 
       &_uptitle {
         font-weight: 700;
