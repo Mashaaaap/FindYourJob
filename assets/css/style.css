@@ -12,44 +12,40 @@ body {
 }
 
 .header {
-  background: #F2F3F6;
-  z-index: 999;
-  font-size: 20px;
-  padding: 30px;
+  padding: 40px 0;
+  background-color: #F2F3F6;
 }
 .header .container {
   display: flex;
   align-items: center;
-  flex-direction: row-reverse;
   justify-content: space-between;
 }
-@media (min-width: 768px) {
-  .header .container {
-    display: flex;
-    justify-content: space-around;
+.header .container .menu_list {
+  display: flex;
+  -moz-column-gap: 20px;
+       column-gap: 20px;
+}
+@media (max-width: 768px) {
+  .header .container .menu_list {
+    display: block;
   }
 }
-.header .container .logo {
-  margin-right: 0;
-}
 
-.btn_group {
-  display: flex;
-  flex-direction: column;
-  -moz-column-gap: 40px;
-       column-gap: 40px;
-  margin-left: 15.6em;
+@media (max-width: 768px) {
+  .btn_group {
+    display: none;
+  }
 }
 .btn_group .btn {
-  background: #F2F3F6;
   border: none;
+  background-color: #F2F3F6;
 }
 .btn_group .btn_primary {
-  background: #1A75E8;
-  border-radius: 5px;
-  color: #FFF;
   border: none;
-  padding: 15px 20px;
+  color: #FFF;
+  padding: 15px 30px;
+  border-radius: 5px;
+  background-color: #1A75E8;
 }
 
 #toggle {
@@ -57,16 +53,24 @@ body {
 }
 
 #toggle:checked ~ nav {
-  display: block;
+  z-index: 5;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 .toggle_btn span {
-  display: block;
+  display: none;
   height: 2px;
   width: 30px;
   background: #21243D;
   position: relative;
   transition: transform 0.4s;
+}
+@media (max-width: 768px) {
+  .toggle_btn span {
+    display: block;
+  }
 }
 .toggle_btn span::before {
   content: "";
@@ -105,35 +109,20 @@ body {
   z-index: 10;
 }
 
-.menu_list {
-  margin-left: 15.6em;
-}
-.menu_list_link {
-  list-style: none;
-  color: #000;
-  align-items: center;
-  text-decoration: none;
-  display: block;
-  text-align: center;
-  font-size: 16px;
-}
-.menu_list_link:hover {
-  color: #1A75E8;
-}
-
 @media (max-width: 768px) {
   nav {
     display: none;
     position: absolute;
     top: 0px;
     right: 0;
+    height: 100%;
     width: 100%;
+    list-style: none;
     background-color: #F2F3F6;
     z-index: 9;
   }
-  .menu_list-link {
+  .menu_list-_ink {
     text-decoration: none;
-    list-style: none;
     color: #21243D;
   }
 }
@@ -141,20 +130,11 @@ body {
   .toggle_btn {
     display: none;
   }
-  nav {
-    display: flex;
-  }
-  nav .btn_group {
-    display: flex;
-    margin-right: 0;
-    flex-direction: row;
-  }
   .menu_list {
     list-style: none;
     display: flex;
     gap: 30px;
-    font-weight: 500;
-    font-size: 16px;
+    font-family: "Fira Sans";
     padding: 0;
   }
 }
@@ -367,6 +347,7 @@ a {
   flex-direction: column;
 }
 .for_example .first_example {
+  color: #B2B2B2;
   width: 100%;
   margin-left: -60px;
 }
@@ -404,7 +385,7 @@ a {
 }
 .category .category_text {
   margin: 0;
-  padding: 70px 147px 40px;
+  padding: 70px 0 40px;
   font-weight: 700;
   font-size: 24px;
   line-height: 29px;
@@ -540,6 +521,8 @@ a {
     height: 160px;
     display: flex;
     padding: 30px;
+    margin-left: auto;
+    align-items: center;
   }
 }
 .vacation_item_money {
@@ -566,9 +549,10 @@ a {
   .requirements {
     display: flex;
     flex-direction: row;
-    -moz-column-gap: 43px;
-         column-gap: 43px;
+    -moz-column-gap: 15px;
+         column-gap: 15px;
     margin-right: 85px;
+    align-items: center;
   }
 }
 .requirements .first_requirement {
@@ -578,7 +562,6 @@ a {
 .requirements .elements {
   display: flex;
   gap: 5px;
-  margin: -20px 0 27px -35px;
 }
 .requirements .elements .requirement_element {
   border: 1px solid #B2B2B2;
@@ -596,6 +579,16 @@ a {
   font-size: 14px;
   color: #111238;
   opacity: 0.8;
+}
+
+.end_button {
+  width: 193px;
+  height: 49px;
+  margin-top: 40px;
+  color: #FFFFFF;
+  background: #1A75E8;
+  border-radius: 5px;
+  border: none;
 }
 
 .footer {
