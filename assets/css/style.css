@@ -1,3 +1,4 @@
+@charset "UTF-8";
 * {
   box-sizing: border-box;
 }
@@ -15,6 +16,12 @@ body {
   padding: 40px 0;
   background-color: #F2F3F6;
 }
+@media (max-width: 768px) {
+  .header {
+    padding: 0;
+    height: 150px;
+  }
+}
 .header .container {
   display: flex;
   align-items: center;
@@ -30,12 +37,10 @@ body {
     display: block;
   }
 }
-
-@media (max-width: 768px) {
-  .btn_group {
-    display: none;
-  }
+.header .container .menu_list_link:hover {
+  color: #1A75E8;
 }
+
 .btn_group .btn {
   border: none;
   background-color: #F2F3F6;
@@ -209,6 +214,20 @@ a {
 .uptitle h1 {
   font-weight: 900;
   font-size: 24px;
+  transition: color 0.7s;
+  position: relative;
+}
+.uptitle h1::before {
+  content: "Знайдіть віддалену роботу вашої мрії";
+  position: absolute;
+  top: 0;
+  left: 0;
+  color: #1A75E8;
+  transform: scaleX(0);
+  transform-origin: left;
+}
+.uptitle h1:hover::before {
+  transform: scaleX(1);
 }
 .uptitle p {
   font-size: 16px;
@@ -485,7 +504,6 @@ a {
 @media (min-width: 820px) {
   .vacation {
     text-align: left;
-    margin-left: 147px;
   }
 }
 .vacation .container {

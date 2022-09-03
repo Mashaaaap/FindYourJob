@@ -6,6 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Find Your Job</title>
+    <link rel="stylesheet" href="assets/css/animate.css">
     <link rel="shortcut icon" href="assets/img/Untitled_design__1_-removebg-preview.png" type="image/x-icon">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -55,11 +56,11 @@
                         <a href="#" class="menu_list_link">Компанії</a>
                     </li>
                 </ul>
+                <div class="btn_group">
+                    <button class="btn">Увійти</button>
+                    <button class="btn_primary">Реєстрація</button>
+                </div>
             </nav>
-            <div class="btn_group">
-                <button class="btn">Увійти</button>
-                <button class="btn_primary">Реєстрація</button>
-            </div>
         </div>
     </header>
     <!-- find job section  -->
@@ -67,7 +68,7 @@
        <section class="find_job">
             <div class="container">
                <div class="uptitle">
-                    <h1>Знайдіть віддалену роботу вашої мрії</h1>
+                    <h1 class="animated_bounse">Знайдіть віддалену роботу вашої мрії</h1>
                     <p class="uptitle_text">Створіть резюме або надішліть відгук на вакансію у компанії зі світовим ім'ям та працюйте за вільним графіком</p>
     
                     <div class="uptitle_form_block">
@@ -167,7 +168,7 @@
        <section class="vacation">
         <h2>Свіжі вакансії</h2> 
           <div class="container">
-            <div class="vacation_item">
+            <div class="vacation_item wow animated fadeInLeft">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <circle cx="50" cy="50" r="49.5" fill="url(#pattern0)" stroke="#F2F3F6"/>
                     <defs>
@@ -194,7 +195,7 @@
                 </div>
                 <a href="#">Детальніше →</a>
             </div>
-            <div class="vacation_item">
+            <div class="vacation_item wow animated fadeInLeft">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <circle cx="50" cy="50" r="49.5" fill="url(#pattern0)" stroke="#F2F3F6"/>
                     <defs>
@@ -221,7 +222,7 @@
                 </div>
                 <a href="#">Детальніше →</a>
             </div>
-            <div class="vacation_item">
+            <div class="vacation_item wow animated fadeInLeft">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <circle cx="50" cy="50" r="49.5" fill="url(#pattern0)" stroke="#F2F3F6"/>
                     <defs>
@@ -248,7 +249,7 @@
                 </div>
                 <a href="#">Детальніше →</a>
             </div>
-            <div class="vacation_item">
+            <div class="vacation_item wow animated fadeInLeft">
                 <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                     <circle cx="50" cy="50" r="49.5" fill="url(#pattern0)" stroke="#F2F3F6"/>
                     <defs>
@@ -307,5 +308,19 @@
         </div>
     </div>
 </footer>
+
+<script src="wow.min.js"></script>
+<script>
+    wow = new WOW(
+        {
+            boxClass:     "wow",
+            animateClass: "animated",
+            offset:       0,
+            mobile:       false,
+            live:         true
+        }
+    )
+    wow.init();
+</script>
 </body>
 </html>

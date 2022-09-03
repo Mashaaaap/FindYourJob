@@ -156,6 +156,10 @@
 .header {
     padding: 40px 0;
     background-color: #F2F3F6;
+    @media (max-width: 768px) {
+       padding: 0;
+       height: 150px;
+    }
 
     .container {
         display: flex;
@@ -168,14 +172,15 @@
             @media (max-width: 768px) {
                 display: block;
             }
+
+            &_link:hover {
+                color: #1A75E8;
+            }
         }
     }
 }
 
 .btn_group {
-    @media (max-width: 768px) {
-        display: none;
-    }
     .btn {
         border: none;
         background-color: #F2F3F6;
