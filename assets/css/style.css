@@ -16,12 +16,6 @@ body {
   padding: 40px 0;
   background-color: #F2F3F6;
 }
-@media (max-width: 768px) {
-  .header {
-    padding: 0;
-    height: 150px;
-  }
-}
 .header .container {
   display: flex;
   align-items: center;
@@ -41,6 +35,11 @@ body {
   color: #1A75E8;
 }
 
+@media (max-width: 768px) {
+  .btn_group {
+    display: none;
+  }
+}
 .btn_group .btn {
   border: none;
   background-color: #F2F3F6;
@@ -62,6 +61,21 @@ body {
   display: flex;
   flex-direction: column;
   justify-content: center;
+}
+
+#toggle:checked ~ .btn_group {
+  display: block;
+  z-index: 5;
+  display: flex;
+  position: absolute;
+  flex-direction: column;
+  justify-content: center;
+}
+
+#toggle:checked ~ .burger_container {
+  height: 200px;
+  display: block;
+  position: absolute;
 }
 
 .toggle_btn span {
