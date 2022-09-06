@@ -28,7 +28,6 @@
 .btn_group {
     @media (max-width: 768px) {
         display: none;
-        margin-left: -10px;
     }
     
     .btn {
@@ -63,6 +62,7 @@
     z-index: 5;
     display: flex;
     position: absolute;
+    margin-left: -10px;
     flex-direction: column;
     justify-content: center; 
 }
