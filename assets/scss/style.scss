@@ -31,6 +31,10 @@ body {
     max-width: 100%
 }
 
+h2 {
+    text-align: left;
+}
+
 a {
     text-decoration: none;
     color: #111238;
@@ -423,7 +427,11 @@ a {
      display: flex;
      flex-wrap: wrap;
      column-gap: 20px;
+     text-align: center;
      justify-content: center;
+     @media (min-width: 1024px) {
+         text-align: left;
+     }
     }
 
     a {
@@ -445,6 +453,7 @@ a {
         margin: 10px 5px;
     }
     @media (min-width: 1024px) {
+        text-align: left;
         width: 100%;
         height: 160px;
         display: flex;
@@ -452,6 +461,20 @@ a {
         margin-left: auto;
         align-items: center;
     }
+
+    &_title {
+        margin-left: 15px;
+
+        &_uptitle {
+          font-weight: 700;
+        }
+
+        &_subtitle {
+          font-weight: 400;
+          font-size: 14px;
+          color: #111238;
+          opacity: 0.8;
+        }
 
      &_money {
        width: 113px;
@@ -467,11 +490,11 @@ a {
 }
 
 .requirements {
-    margin-left: 100px;
     margin-top: 25px;
     color: #B2B2B2;
     font-size: 14px;
     display: flex;
+    align-items: center;
     flex-direction: column;
     @media (min-width: 1024px) {
         display: flex;
@@ -483,10 +506,10 @@ a {
 
     .first_requirement {
         width: 100%;
-        margin-left: -60px;
     }
 
     .elements {
+        margin-top: -5px;
         display: flex;
         gap: 5px;
 
@@ -500,18 +523,18 @@ a {
     }
 } 
 
-.vacation_item_title {
+// .vacation_item_title {
 
-      &_uptitle {
-        font-weight: 700;
-      }
-      &_subtitle {
-        font-weight: 400;
-        font-size: 14px;
-        color: #111238;
-        opacity: 0.8;
-      }
-}
+//       &_uptitle {
+//         font-weight: 700;
+//       }
+//       &_subtitle {
+//         font-weight: 400;
+//         font-size: 14px;
+//         color: #111238;
+//         opacity: 0.8;
+//       }
+// }
 
 .end_button {
     width: 193px;
@@ -525,4 +548,3 @@ a {
 
 // footer
 @import 'footer';
-
