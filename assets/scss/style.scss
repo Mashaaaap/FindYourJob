@@ -14,8 +14,10 @@ body {
     font-weight: 400;
     font-size: 16px;
     color: #21243D;
+    text-align: center;
 }
 
+// header
 @import 'header';
 
 .container {
@@ -29,7 +31,15 @@ body {
     max-width: 100%
 }
 
-// header
+h2 {
+    text-align: left;
+}
+
+a {
+    text-decoration: none;
+    color: #111238;
+    list-style: none;
+}
 
 // find job section
 
@@ -96,6 +106,27 @@ body {
     h1 {
         font-weight: 900;
         font-size: 24px;
+        transition: color .7s;
+        position: relative;
+
+        &::before{
+            content: 'Знайдіть віддалену роботу вашої мрії';
+            position: absolute;
+            top: 0;
+            left: 0;
+            color: #1A75E8;
+            transform: scaleX(0);
+            transform-origin: left;
+
+        }
+
+        &:hover::before {
+            transform: scaleX(1);
+        }
+
+        // &:hover {
+        //     color: #1A75E8;
+        // }
     }
 
     p {
@@ -234,7 +265,6 @@ body {
     }
 }
 
-
 .uptitle_form_btn img {
     width: 15px;
     height: 15px;
@@ -251,6 +281,7 @@ body {
     flex-direction: column;
 
     .first_example {
+        color: #B2B2B2;
         width: 100%;
         margin-left: -60px;
     }
@@ -287,62 +318,30 @@ body {
 }
 // category
 .category {
-    font-family: $font;
-    color: #21243D;
-    .category_text {
-       margin: 0;
-       padding: 70px 147px 40px;
-       font-style: normal;
-       font-weight: 700;
-       font-size: 24px;
-       line-height: 29px;
-       @media (max-width: 425px) {
-        text-align: center;
-        margin-left: -130px;
-        margin-right: 0;
-        padding-right: 10px;
+    .container {
+        display: flex;
+
     }
-    }
+  
 
     .box {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        column-gap: 30px;
         background-color: #F2F3F6;
         width: 166px;
         height: 128px;
         border-radius: 10px;
-        margin: 0;
-        margin-right: 30px;
         transition-duration: 0.5s, 0.5s;
         transition-property: color, background-color;
         transition-timing-function: ease-in-out;
         @media (max-width: 425px) {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            margin-left: 81px;
-            margin-bottom: 30px;
-            margin-right: 0;
             border: 0;
         }
     }
 
     .box1 {
-        display: inline-block;
-        justify-content: center;
-        align-items: center;
-        text-align: center;
-        column-gap: 30px;
         background-color: #F2F3F6;
         width: 166px;
         height: 128px;
         border-radius: 10px;
-        margin: 0;
-        margin-right: 30px;
-        margin-left: 147px;
         transition-duration: 0.5s, 0.5s;
         transition-property: color, background-color;
         transition-timing-function: ease-in-out;
@@ -388,24 +387,71 @@ body {
 // vacation section
 
 .vacation {
-    .container {
+    text-align: center;
+    @media (min-width: 820px) {
+        text-align: left;
+    }
 
+    .container {
+     display: flex;
+     flex-wrap: wrap;
+     column-gap: 20px;
+     text-align: center;
+     justify-content: center;
+     @media (min-width: 1024px) {
+         text-align: left;
+     }
+    }
+
+    a {
+        text-decoration: none;
+        color: $btnColor;
+        margin-right: 0;
     }
 }
 
 .vacation_item {
-    margin: 20px 0;
+    width: 290px;
+    height: 441px;
+    margin: 10px 0;
     text-align: center;
     padding: 30px 0;
     border: 1px solid #C5C9D5;
     border-radius: 10px;
+    @media (min-width: 820px) {
+        margin: 10px 5px;
+    }
+    @media (min-width: 1024px) {
+        text-align: left;
+        width: 100%;
+        height: 160px;
+        display: flex;
+        padding: 30px;
+        margin-left: auto;
+        align-items: center;
+    }
+
+    &_title {
+        margin-left: 15px;
+
+        &_uptitle {
+          font-weight: 700;
+        }
+
+        &_subtitle {
+          font-weight: 400;
+          font-size: 14px;
+          color: #111238;
+          opacity: 0.8;
+        }
 
      &_money {
        width: 113px;
        height: 39px;
        color: #ffffff;
        font-weight: 700;
-       margin-left: 105px;
+       margin-left: auto;
+       margin-right: auto;
        background: $btnColor;
        border-radius: 5px;
        padding: 10px 24px 25px;
@@ -413,22 +459,28 @@ body {
 }
 
 .requirements {
-    margin-left: 100px;
     margin-top: 25px;
     color: #B2B2B2;
     font-size: 14px;
     display: flex;
+    align-items: center;
     flex-direction: column;
+    @media (min-width: 1024px) {
+        display: flex;
+        flex-direction: row;
+        column-gap: 15px;
+        margin-right: 85px;
+        align-items: center;
+    }
 
     .first_requirement {
         width: 100%;
-        margin-left: -60px;
     }
 
     .elements {
+        margin-top: -5px;
         display: flex;
         gap: 5px;
-        margin: -20px 0 27px -35px;
 
         .requirement_element {
         border: 1px solid #B2B2B2;
@@ -440,18 +492,27 @@ body {
     }
 } 
 
-.vacation_item_title {
-     padding: 10px;
+// .vacation_item_title {
 
-      &_uptitle {
-        font-weight: 700;
-      }
-      &_subtitle {
-        font-weight: 400;
-        font-size: 14px;
-        color: #111238;
-        opacity: 0.8;
-      }
+//       &_uptitle {
+//         font-weight: 700;
+//       }
+//       &_subtitle {
+//         font-weight: 400;
+//         font-size: 14px;
+//         color: #111238;
+//         opacity: 0.8;
+//       }
+// }
+
+.end_button {
+    width: 193px;
+    height: 49px;
+    margin-top: 40px;
+    color:#FFFFFF;
+    background: #1A75E8;
+    border-radius: 5px;
+    border: none;
 }
 
 // email
